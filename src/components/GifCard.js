@@ -42,8 +42,8 @@ class GifCard extends Component {
             
                 
             <div>
-            {items}
-            {console.log(this.state.search + 'gc')}
+                {items}
+                {console.log(this.state.search + 'gc')}
             </div>
             );
     }
