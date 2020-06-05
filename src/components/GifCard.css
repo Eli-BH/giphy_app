@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0; 
+}
+
+.GifCard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: seagreen;
+    padding: 15px;
+}
+
+.gif{
+    padding: 10px;
+}
+
+#trending{
+    color: white; 
+    text-align: center;
+    background-color: #111;
+    padding: 12px;
+}
+
+.gif-cards img{
+    padding: 10px
+}

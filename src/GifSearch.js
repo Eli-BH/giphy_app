@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import SearchField from './components/SearchField'
 import axios from 'axios';
+import './components/GifSearch.css';
 
 
 class GifSearch extends Component{
@@ -54,8 +55,7 @@ class GifSearch extends Component{
                 onChange={this.handleInput}
                 onSearch = {this.handleSearch}
                 />
-            <h2>{this.state.term}</h2>
-            {items}
+            <div className="gifSearch">{items}</div>
         </div>
     )
     }

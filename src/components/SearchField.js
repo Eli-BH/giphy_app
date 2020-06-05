@@ -1,5 +1,5 @@
-import React from 'react'
-import GifCard from './GifCard.js'; 
+import React from 'react' 
+import './GifSearch.css';
 
 const SearchField =  ({value, onChange, onSearch}) => {
     return (

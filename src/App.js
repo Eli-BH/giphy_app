@@ -5,18 +5,16 @@ import GifSearch from "./GifSearch";
 function App() {
   const [search, setSearch] = useState(false);
   return (
-    <div className="gifCard">
+    <div>
       {!search ? (
-        <div>
-          <h1>Trending Gifs</h1>
-          <button onClick={() => setSearch(true)}>Search</button>
-          <GifCard />
+        <div className="gifDiv">
+          <GifCard/>
+          <button onClick={() => setSearch(true)}>Search for Gifs</button>
         </div>
       ) : (
-        <div> 
-          
-          <button onClick={() => setSearch(false)}>Trending</button>
+        <div className = "gifSearchToggle"> 
           <GifSearch />
+          <button onClick={() => setSearch(false)} className="trend-btn">Trending</button>
         </div>
       )}
     </div>

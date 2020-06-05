@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import './GifCard.css'
 
 class GifCard extends Component {
     constructor(props){
@@ -34,7 +34,7 @@ class GifCard extends Component {
         for(let i = 0; i < this.state.gifUrl.length; i++){
             items.push(
                 <div>
-                    <img src={this.state.gifUrl[i]} alt="gif"/>
+                    <img src={this.state.gifUrl[i]} alt="gif" className="gif"/>
                 </div>)
         }
         
@@ -42,8 +42,11 @@ class GifCard extends Component {
             
                 
             <div>
-                {items}
-                {console.log(this.state.search + 'gc')}
+                <h1 id="trending">Trending Gifs</h1>
+                <div className="GifCard">
+                    {items}
+                    {console.log(this.state.search + 'gc')}
+                </div>
             </div>
             );
     }
