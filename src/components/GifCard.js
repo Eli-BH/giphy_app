@@ -13,8 +13,9 @@ class GifCard extends Component {
 
     componentDidMount () {
         //if(this.trending)
+        const API_KEY = process.env.REACT_APP_API_KEY;
         axios
-            .get('http://api.giphy.com/v1/gifs/trending?api_key=9nyA05jjiNMrTb4CsnPDkfKArV9U5Gap&limit=10&rating=G')
+            .get(`http://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=10&rating=G`)
             .then((response) => {
                 const data = response.data; 
                 const newGifs = [];

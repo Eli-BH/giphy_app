@@ -20,7 +20,8 @@ class GifSearch extends Component{
 
     handleSearch = () => {
         const searchInput = this.state.searchInput;
-        const url = `https://api.giphy.com/v1/gifs/search?api_key=9nyA05jjiNMrTb4CsnPDkfKArV9U5Gap&q=${searchInput}&limit=15&offset=0&rating=G&lang=en`;
+        const API_KEY = process.env.REACT_APP_API_KEY;
+        const url = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${searchInput}&limit=15&offset=0&rating=G&lang=en`;
         axios
             .get(url)
             .then((response) => {
